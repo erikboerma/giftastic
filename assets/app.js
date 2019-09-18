@@ -28,11 +28,27 @@ function createButtons() {
       url: queryURL,
       method: "GET"
     }).then(function(response) {
-      //need to manipulate the array number to pull multiple responses (for loop)
-      $("#gifView").text(JSON.stringify(response.data[0].rating));
-      console.log(response);
+     
+
+      var results = response.data;
+
+      for (i=0; i < results.length; i++){
+        // creates the div for the image and rating 
+        var resultsDiv=$("<div>");
+        // generates the rating 
+        var p = $("<p>").text("Rating: " + results[i].rating);
+        // this generates the image 
+        var image = $("<img>");
+        image.attr("src", results[i].images.preview_gif.url);
+
+        resultsDiv.append(p);
+        resultsDiv.append(image);
+
+        $("#gifView").append(resultsDiv);
+
+      }
     })
-  });
+  })
 };
 
 
