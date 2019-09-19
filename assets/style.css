@@ -1,0 +1,29 @@
+.container {
+    max-width: 1080px;
+    margin: auto;
+}
+#results {
+    border: 2px solid black;
+    color: red;
+    width: 250px;
+    height: 250px;
+    float: left;   
+    margin: 2px; 
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    align-items: center;
+}
+
+button {
+    background-color: blue;
+    font-size: 30px;
+    border-radius: 8px;
+    color: white;
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(231, 235, 16, 0.623);
+}
