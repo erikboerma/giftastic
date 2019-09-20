@@ -2,6 +2,16 @@
     max-width: 1080px;
     margin: auto;
 }
+
+h1 {
+    font-family: cursive;
+    font-size: 60px;
+    text-align: center;
+}
+.gif-form {
+    margin: auto;
+
+}
 #results {
     border: 2px solid black;
     color: red;

@@ -1,9 +1,6 @@
 var gifOptions = ["dog", "fish", "cat"];
 
 
-
-
-
 // create the button from the array 
 function createButtons() {
 
@@ -42,43 +39,37 @@ function createButtons() {
         // generates the rating 
         var p = $("<p>").text("Rating: " + results[i].rating);
         // this generates the image 
-        var image = $("<img class='gifPic' data-state='still'>");
-        image.attr("src", results[i].images.downsized_still.url);
+        var image = $("<img>");
+        image.attr({
+          class: 'gifPic',
+          'data-state': 'still',
+          src: results[i].images.downsized_still.url,
+          still: results[i].images.downsized_still.url,
+          animate: results[i].images.downsized_medium.url
+
+        })
 
         resultsDiv.append(image);
         resultsDiv.append(p);
 
         $("#gifView").append(resultsDiv);
-
-
-        $(".gifPic").on("click", function () {
-          var state = $(this).attr("data-state");
-          console.log(state);
-          console.log(this);
-          if (state === "still") {
-            $(this).attr("src", results[i].images.downsized_medium.url);
-            $(this).attr("data-state", "animate");
-          } else {
-            $(this).attr("src", results[i].images.downsized_still.url);
-            $(this).attr("data-state", "still");
-          }
-
-        })
       }
-
     })
   })
-
 };
+// button click to animate or pause 
+$(document).on("click", ".gifPic", function () {
+  var state = $(this).attr("data-state");
 
-// $("#gifPic").on("click", function () {
-//   var state = $(this).attr("data-state");
-//   console.log(state);
+  if (state === "still") {
+    $(this).attr("src", $(this).attr("animate"));
+    $(this).attr("data-state", "animate");
+  } else {
+    $(this).attr("src", $(this).attr("still"));
+    $(this).attr("data-state", "still");
+  }
 
-
-
-// url for gif that moves =====
-// image.attr("src", results[i].images.downsized_medium.url);
+});
 
 
 // push any new option into the array and create a button 
@@ -89,11 +80,6 @@ $("#add-gif").on("click", function (event) {
   gifOptions.push(gifOption);
   createButtons();
 
-
-
-
 });
-
-
 
 createButtons();
