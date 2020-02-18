@@ -4,6 +4,8 @@ body {
 
 #title {
     font-style: italic;    
+    text-align: center;
+    font-size: 60px;
 }
 
 .row {
@@ -14,12 +16,6 @@ body {
     flex: auto;
 }
 
-
-h1 {
-    font-family: cursive;
-    font-size: 60px;
-    text-align: center;
-}
 .gif-form {
     margin: auto;
 
@@ -34,9 +30,10 @@ h1 {
 }
 
 img {
-    height: 200px;
-    width: 200px;
+    flex: auto;
     align-items: center;
+    height: inherit;
+    width: inherit;
 }
 
 button {
