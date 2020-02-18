@@ -1,7 +1,19 @@
-.container {
-    max-width: 1080px;
-    margin: auto;
+body {
+    background-color: grey;
 }
+
+#title {
+    font-style: italic;    
+}
+
+.row {
+    height: 90%;
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 2px;
+    flex: auto;
+}
+
 
 h1 {
     font-family: cursive;
