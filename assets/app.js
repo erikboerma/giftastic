@@ -35,7 +35,7 @@ function createButtons() {
 
       for (i = 0; i < results.length; i++) {
         // creates the div for the image and rating 
-        var resultsDiv = $("<div id='results'>");
+        var resultsDiv = $("<div class='results'>");
         // generates the rating 
         var p = $("<p>").text("Rating: " + results[i].rating);
         // this generates the image 
