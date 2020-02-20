@@ -8,6 +8,11 @@ body {
     font-size: 60px;
 }
 
+#title1 {
+    font-style: italic;    
+    text-align: center;
+}
+
 .container {
     height: 90%;
     width: 90%;
@@ -17,7 +22,18 @@ body {
     flex: auto;
 }
 
+/* .gifContainer-noResults {
+    background-color: lightgray; 
+    border-radius: 20px;
+ 
+} */
 
+
+hr {
+    background-color: black;
+    height: 2px;
+    border: none;
+}
 
 .gif-form {
     margin: auto;
@@ -48,7 +64,7 @@ img {
 button {
     background-color: blue;
     font-size: 30px;
-    border-radius: 8px;
+    border-radius: 5px;
     color: white;
 }
 
