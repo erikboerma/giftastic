@@ -8,20 +8,27 @@ body {
     font-size: 60px;
 }
 
-.row {
+.container {
     height: 90%;
     width: 90%;
     border: 2px solid black;
-    border-radius: 2px;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(231, 235, 16, 0.623);
     flex: auto;
 }
+
+
 
 .gif-form {
     margin: auto;
 
 }
-.results {
+
+#gifView {
     flex: inherit;
+}
+.results {
+    flex-direction: row;
     border: 2px solid black;
     color: red;
     width: 300px;
