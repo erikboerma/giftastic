@@ -14,8 +14,6 @@ body {
 }
 
 .container {
-  height: 90%;
-  width: 90%;
   border: 2px solid black;
   border-radius: 20px;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
@@ -40,8 +38,12 @@ hr {
 
 #gifView {
   display: flex;
+  flex-wrap: wrap;
+  
 }
 .results {
+    display: flex;
+    align-items: center;
   border: 2px solid black;
   width: 300px;
   height: 300px;
@@ -50,9 +52,9 @@ hr {
 
 img {
   flex: auto;
-  align-items: center;
-  height: 75%;
-  width: 75%;
+  /* align-items: center; */
+  height: 200px;
+  width: 200px;
 }
 
 button {
