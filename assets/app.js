@@ -78,6 +78,7 @@ $("#add-gif").on("click", function (event) {
 
   var gifOption = $("#gif-input").val().trim();
   gifOptions.push(gifOption);
+
   createButtons();
 
 });
